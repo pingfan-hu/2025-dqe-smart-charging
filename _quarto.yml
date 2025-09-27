@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+
+pagetitle: "Smart Charging"
+title: "Consumer Preferences for BEV<br>Smart Charging Programs"
+subtitle: "DQE Part II 2025<br>Funded by the Alfred P. Sloan Foundation"
+author: "Pingfan Hu"
+
+format:
+  revealjs: 
+    smaller: false
+    theme: styles/theme.scss
+    css: styles/slides.css
+    bibliography: bibliography.bib
+    slide-number: true
+    embed-resources: true
+    auto-stretch: false
+    preview-links: auto
+    logo: figs/logo.png
+    footer: "<a href='http://pingfanhu.com'>Pingfan Hu</a> - DQE Part II 2025"
+    link-external-newwindow: true
+    link-external-icon: false
+    title-slide-attributes: 
+      data-background-image: figs/banner.png
+      data-background-size: cover
+      data-background-opacity: "0.2"
+
+execute: 
+  warning: false
+  echo: false
