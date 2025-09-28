@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: _site
 
-pagetitle: "Smart Charging"
+pagetitle: "Smart Charging DQE"
 title: "Consumer Preferences for BEV<br>Smart Charging Programs"
 subtitle: "DQE Part II 2025<br>Funded by the Alfred P. Sloan Foundation"
 author: "Pingfan Hu"
