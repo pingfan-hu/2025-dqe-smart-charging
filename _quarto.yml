@@ -8,9 +8,8 @@ subtitle: "DQE Part II 2025<br>Funded by the Alfred P. Sloan Foundation"
 author: "Pingfan Hu"
 
 format:
-  revealjs: 
+  touhou-revealjs:
     smaller: false
-    theme: styles/theme.scss
     css: styles/slides.css
     bibliography: bibliography.bib
     slide-number: true

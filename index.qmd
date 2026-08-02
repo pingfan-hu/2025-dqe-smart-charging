@@ -5,7 +5,7 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-## EV sales in US reaching ~10% of sales {style="text-align: center;"}
+## EV sales in US reaching ~10% of sales {style="text-align: center;" .light-centered .center}
 
 ![](figs/ev_sales_us.png){fig-align="center" width="80%"}
 
@@ -13,7 +13,7 @@ library(kableExtra)
 Source: Argonne National Lab, [www.anl.gov/ev-facts/model-sales](https://www.anl.gov/ev-facts/model-sales)
 :::
 
-## Introduction {.smaller}
+## Introduction {.smaller .light-centered .center}
 
 - **Unmanaged** BEV charging is becoming a problem to the grid.
 - **Managed** charging is cheaper and smoothes out the grid load.
@@ -27,7 +27,7 @@ Unmanaged BEV charging is becoming a problem to the grid due to the spike. That'
 Smart charging is a type of managed charging, which includes Supplier-Managed Charging, shortened as SMC, and Vehicle-to-Grid, shortened as V2G.
 :::
 
-## SMC - Supplier Managed Charging
+## SMC - Supplier Managed Charging {.light-centered .center}
 
 - SMC smooths out overnight EV charging demand.
 - Electricity demand is controlled below capacity threshold.
@@ -41,7 +41,7 @@ For SMC, Supplier-Managed Charging, it smooths out the overnight EV charging dem
 As you can see, with unmanaged charging, the BEV load easily passes over the capacity threshold.
 :::
 
-## SMC - Supplier Managed Charging
+## SMC - Supplier Managed Charging {.light-centered .center}
 
 - SMC smooths out overnight EV charging demand.
 - Electricity demand is controlled below capacity threshold.
@@ -53,7 +53,7 @@ As you can see, with unmanaged charging, the BEV load easily passes over the cap
 But with SMC, the electricity demand is controlled below the threshold. It reduces the peak demand and saves money.
 :::
 
-## V2G - Vehicle-to-Grid
+## V2G - Vehicle-to-Grid {.light-centered .center}
 
 ![](figs/education_2.png){fig-align="center" width="70%"}
 
@@ -61,9 +61,9 @@ But with SMC, the electricity demand is controlled below the threshold. It reduc
 V2G is short for Vehicle-to-Grid. It is another type of smart charging that allows BEV owners to sell electricity back to the grid. With V2G, BEVs become potential sources of electricity.
 :::
 
-## [Smart charging depends on enrollment.]{style="text-align: center; display: block;"} {.center}
+## [Smart charging depends on enrollment.]{style="text-align: center; display: block;"} {.light-centered .center}
 
-## Literature Review
+## Literature Review {.light-centered .center}
 
 1. A study by @wong_incentives_2023 examined **incentives** affect the EV owners' acceptance, <span style="color: #739C69">but EV ownership is only 19%</span>.
 2. A study by @philip_consumer_2024 found **range anxiety** matters, <span style="color: #739C69">but EV ownership is only 1.28%</span>.
@@ -79,7 +79,7 @@ We need high EV ownership & large sample size, and consider heterogeneity.
 There's been a few studies that looked on people's willingness to participate to smart charging programs, but they all have small sample size and low EV ownership. Therefore, we aimed to conduct a large-scale survey with high EV ownership to study the heterogeneity of BEV owners' preferences.
 :::
 
-## Research Questions {style="line-height: 2;"}
+## Research Questions {style="line-height: 2;" .light-centered .center}
 
 1. **Sensitivity**: How do changes in smart charging program **features** influence BEV owners' willingness to opt in?
 
@@ -101,7 +101,7 @@ Here we have 2 research questions. Firstly, we want to know the sensitivity of e
 In order to answer these questions, we designed a conjoint survey to collect BEV owners' willingness to participate. Then we used multinomial logit models to simulate the utility of each program feature.
 :::
 
-## Survey Design with `formr`
+## Survey Design with `formr` {.light-centered .center}
 
 <br>
 <br>
@@ -126,7 +126,7 @@ In order to answer these questions, we designed a conjoint survey to collect BEV
 We used formr to design the survey. It's an open-source survey platform that supports R coding. In this survey, we have conjoint questions to ask for willingness to participate, and multiple choice questions to collect demographic information.
 :::
 
-## Conjoint Question Explained
+## Conjoint Question Explained {.light-centered .center}
 
 ### A Sample Conjoint Question {style="padding-top: 0.5em; text-align: center; font-size: 36px; color: #739C69;"}
 
@@ -142,7 +142,7 @@ We used formr to design the survey. It's an open-source survey platform that sup
 But first, I want to explain what conjoint question is. If I care about apples, I would want to know how people value type vs price vs freshness. In this apple example, you can only choose one set of the attributes, so if you pick one option, you pick all the attributes in it. In short, conjoint is about forcing people to make trade-offs.
 :::
 
-## SMC Programs {.smaller style="line-height: 1.8;"}
+## SMC Programs {.smaller style="line-height: 1.8;" .light-centered .center}
 
 ::: {.columns}
 ::: {.column .fragment style="padding-top: 0.5em;"}
@@ -210,7 +210,7 @@ Here is a sample SMC program. You can see the one-time enrollment cash, recurrin
 The battery thresholds here are well-designed to provide an immediate visual aid of the minimum battery and guaranteed battery. We also used milage instead of percentage to make it more intuitive. The mileage will be shown according to the real values of each participant.
 :::
 
-## V2G Programs {.smaller style="line-height: 1.8;"}
+## V2G Programs {.smaller style="line-height: 1.8;" .light-centered .center}
 
 ::: {.columns}
 ::: {.column style="padding-top: 0.5em;"}
@@ -276,7 +276,7 @@ This is the conjoint question design for V2G programs. V2G is short for Vehicle-
 The battery thresholds are in the same layout, but since V2G drains the battery, the lower bound is how much the battery is drained to, and guaranteed battery is how much it's charged back to.
 :::
 
-## Sample SMC Question
+## Sample SMC Question {.light-centered .center}
 
 ![](figs/smc_question.jpg){fig-align="center"}
 
@@ -284,7 +284,7 @@ The battery thresholds are in the same layout, but since V2G drains the battery,
 There are 6 SMC conjoint questions. In each question, participants are provided with 2 valid options and a "Not Interested" option. It's important to have this "Not Interested" option, because it is a validation of willingness. When participants choose from these 2 valid options, they are surely to be interested in what they choose. Otherwise, they will choose "Not Interested".
 :::
 
-## Sample V2G Question
+## Sample V2G Question {.light-centered .center}
 
 ![](figs/v2g_question.jpg){fig-align="center"}
 
@@ -292,7 +292,7 @@ There are 6 SMC conjoint questions. In each question, participants are provided 
 Likewise, there are 6 V2G conjoint questions.
 :::
 
-## Survey Fielding - 1356 in Total
+## Survey Fielding - 1356 in Total {.light-centered .center}
 
 ::: {.columns}
 ::: {.column width="40%"}
@@ -322,18 +322,18 @@ Likewise, there are 6 V2G conjoint questions.
 We collected in total of 1,356 complete, filtered responses from Meta and Dynata throughout 2024, and we made sure that all participants are real BEV owners.
 :::
 
-## Survey Question - Car Ownership
+## Survey Question - Car Ownership {.light-centered .center}
 
 ![](figs/car_ownership.png){fig-align="center" width="55%"}
 
-## Survey Results - Top 10 BEV
+## Survey Results - Top 10 BEV {.light-centered .center}
 ![](figs/top_bev.png)
 
 ::: {.notes}
 This is a showcase of the top 10 BEV models from our survey results. You can see that Tesla is the most popular brand, followed by Ford, Chevrolet, and some other popular brands. These results are also representative of the BEV market in the United States.
 :::
 
-## Survey Results - Demographics
+## Survey Results - Demographics {.light-centered .center}
 
 ::: {.fragment style="fig-align: center;"}
 ![](figs/result_1.png)
@@ -351,7 +351,7 @@ This is a showcase of the top 10 BEV models from our survey results. You can see
 Other than the BEV models, there are also some important demographics information collected in the survey. You can see most families have 2 cars; most of owners charge at home for more than 8 hours; and most of them care of climate very much. And more importantly, we have 100% BEV ownership.
 :::
 
-## Survey Results - Willingness to Participate {.smaller}
+## Survey Results - Willingness to Participate {.smaller .light-centered .center}
 
 ::: {.fragment}
 ### Multinomial Logit Models {style="text-align: center; font-size: 36px; color: #739C69;"}
@@ -395,7 +395,7 @@ Here are the coefficient estimate plots of both programs. As you can see, the "N
 However, coefficients alone are not enough to interpret the willingness to participate. A more intuitive approach is the sensitivity, which means by how much the enrollment rate will change when a feature value changes.
 :::
 
-## Enrollment Sensitivity {.smaller style="line-height: 1.8;"}
+## Enrollment Sensitivity {.smaller style="line-height: 1.8;" .light-centered .center}
 
 ::: {.columns}
 ::: {.column style="padding-top: 1em;"}
@@ -439,7 +439,7 @@ attribute_kable_enroll_cash
 This is one example of the sensitivity plots. As the enrollment cash increases, the user enrollment increases as well. The solid part is from the results, and the dotted part is the extrapolation with the model.
 :::
 
-## Enrollment Sensitivity
+## Enrollment Sensitivity {.light-centered .center}
 
 ![](figs/sensitivity_plot_2.png){fig-align="center"}
 
@@ -452,7 +452,7 @@ This is one example of the sensitivity plots. As the enrollment cash increases, 
 And here we have a full demonstration of all sensitivity plots. Steeper slope indicates higher sensitivity. Also, as the feature values become higher, we see diminishing returns. But the solid parts are basically linear.
 :::
 
-## Equivalencies of 5% Enrollment Increase
+## Equivalencies of 5% Enrollment Increase {.light-centered .center}
 
 <br>
 
@@ -520,7 +520,7 @@ To start with, smaller value indicates higher efficiency, and recurring incentiv
 Also, guaranteed threshold is more important in SMC than in V2G, indicating range anxiety. Finally, monetary incentives are valued more in V2G than in SMC. This indicates that BEV owners are willing to leverage their BEVs as a source of income.
 :::
 
-## SMC Scenario Analysis
+## SMC Scenario Analysis {.light-centered .center}
 ![](figs/smc_scenario_plot.png){fig-align="center"}
 
 ::: {style="font-size: 26px;"}
@@ -537,7 +537,7 @@ Here for SMC we have 3 scenarios. They are flexibility, recurring cash, and one-
 As we can see, for SMC, flexibility is highly valued, and recurring incentives are more important than one-time. So due to the range anxiety, payment alone is not enough. There should be a combination of flexibility and monetary incentives.
 :::
 
-## V2G Scenario Analysis
+## V2G Scenario Analysis {.light-centered .center}
 ![](figs/v2g_scenario_plot.png){fig-align="center"}
 
 ::: {style="font-size: 26px;"}
@@ -550,7 +550,7 @@ As we can see, for SMC, flexibility is highly valued, and recurring incentives a
 For V2G programs, recurring incentives are also more important than one-time. But flexibility is compromised since owners are willing to use their BEVs as a source of income. So the V2G programs are more incentive powered than SMC programs.
 :::
 
-## Smart Charging Enrollment Simulator {style="text-align: center;"}
+## Smart Charging Enrollment Simulator {style="text-align: center;" .light-centered .center}
 
 [![](figs/simulator.png){width="100%" fig-align="center" style="border: 2px solid #5654A2;"}](https://gwuvehicle.shinyapps.io/enrollment_simulator/)
 
@@ -561,7 +561,7 @@ Here we've made a smart charging enrollment simulator. We can play around with i
 2. More enrollment increase in V2G: Recurring cash from $2 to $20.
 :::
 
-## Contributions
+## Contributions {.light-centered .center}
 
 <br>
 
@@ -569,7 +569,7 @@ Here we've made a smart charging enrollment simulator. We can play around with i
 2. Quantified the **sensitivity** of BEV owners' preferences for smart charging features.
 3. Introduced the concept of attribute **equivalencies** to inform incentive design.
 
-## Appendix - SMC Logit Model {.smaller}
+## Appendix - SMC Logit Model {.smaller .light-centered .center}
 
 $$
 \begin{align*}
@@ -603,7 +603,7 @@ smc_table
 
 :::
 
-## Appendix - V2G Logit Model {.smaller}
+## Appendix - V2G Logit Model {.smaller .light-centered .center}
 
 $$
 \begin{align*}
@@ -637,4 +637,4 @@ v2g_table
 
 :::
 
-## Reference List
+## Reference List {.center}
